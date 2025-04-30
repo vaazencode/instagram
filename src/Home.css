@@ -1,0 +1,438 @@
+/* General Reset and Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0707;
+  color: #f0f0f0;
+}
+
+/* Layout Container */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Sidebar Navigation */
+.side-nav {
+  width: 250px;
+  background-color: #150e0e;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: 1px solid #100d0d;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav ul li {
+  color: #f0f0f0;
+  padding: 15px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.side-nav ul li:hover {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+}
+
+/* Main Content Area */
+.main-content {
+  margin-left: 270px;
+  flex-grow: 1;
+  max-width: 600px;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+/* Stories Bar */
+.stories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 20px 0;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.story {
+  text-align: center;
+}
+
+.story-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff9800;
+  object-fit: cover;
+}
+
+
+
+/* Feed / Posts */
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.post:first-child {
+  margin-top: 1000px; /* Move down */
+  transform: translateX(-60px); /* Shift slightly to the left */
+}
+ .post:nth-child(2) {
+  margin-top: 2px; /* Move down */
+  transform: translateX(-60px); /* Shift left */
+ } 
+
+
+
+.post {
+  width: 100%;
+  background: #080606;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+}
+
+/* Post Header */
+.post-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+/* Post Image */
+.post-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Post Actions */
+.post-actions {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+/* Caption and Comments */
+.caption {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #f3e6e6;
+}
+
+.comments {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.comment {
+  font-size: 14px;
+}
+
+/* Comment Input */
+.comment-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #120d0d;
+  color: white;
+}
+
+/* Dropdown Menu */
+.menu-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 5px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background: #121212;
+  border: 1px solid #444;
+  border-radius: 10px;
+  top: 40px;
+  right: 0;
+  z-index: 10;
+  padding: 10px;
+  width: 150px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu p {
+  margin: 0;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #333;
+}
+
+.dropdown-menu p:last-child {
+  border-bottom: none;
+}
+
+/* User Suggestions */
+.user-suggestions {
+  width: 280px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #070606;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  color: white;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.suggested-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.suggested-user p {
+  flex: 1;
+  font-size: 14px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.suggested-user button {
+  background: #0095f6;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  width: 70px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+
+/* Footer Text */
+.user-suggestions p:last-child {
+  font-size: 12px;
+  margin-top: 20px;
+  color: #999;
+}
+/*check */
+.stories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 20px 0;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.story {
+  text-align: center;
+}
+
+.story-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #ff9800;
+  object-fit: cover;
+}
+
+/* Post Button and Dropdown Menu Style */
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #f2f2f2;
+  cursor: pointer;
+  padding: 0;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  right: 15px;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  z-index: 10;
+}
+
+.dropdown-menu p {
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.dropdown-menu p:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu p:hover {
+  background-color: #f0f0f0;
+}
+
+/* Post Image */
+.post-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Additional Styling for Post */
+.post-actions {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.caption {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #f3e6e6;
+}
+
+.comments {
+  margin-top: 10px;
+  color: #555;
+}
+
+.comment {
+  font-size: 14px;
+  color: #f8e8e8;
+}
+
+.comment-input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #0b0808;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #120d0d;
+}
+
+
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .user-suggestions {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .story-pic {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+  }
+
+  .post-actions {
+    font-size: 16px;
+  }
+
+  .side-nav ul li {
+    font-size: 16px;
+  }
+
+  .comment-input {
+    font-size: 14px;
+  }
+}

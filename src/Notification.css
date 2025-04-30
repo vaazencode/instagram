@@ -1,0 +1,93 @@
+.notification-container {
+    padding: 20px;
+    background-color: #0a0707;
+    color: #fff;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .notification-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .no-notification {
+    text-align: center;
+    color: #bbb;
+  }
+  
+  .notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .notification-card {
+    display: flex;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    transition: background 0.3s;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+  }
+  
+  .notification-card:hover {
+    background: #2a2a2a;
+  }
+  
+  .notif-profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .notif-info p {
+    margin: 0;
+    font-size: 15px;
+    color: #eee;
+  }
+  
+  .notif-time {
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  /* Responsive design */
+  
+  @media (max-width: 768px) {
+    .notif-profile-pic {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .notif-info p {
+      font-size: 14px;
+    }
+  
+    .notif-time {
+      font-size: 11px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .notification-header {
+      font-size: 20px;
+    }
+  
+    .notification-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .notif-time {
+      align-self: flex-end;
+    }
+  }
+  
